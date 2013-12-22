@@ -236,7 +236,7 @@ final class PhabricatorAuthProviderCas
 
   public function loadCas($config)
   {
-    if (!class_exists('phpCAS')){
+    if (!class_exists('phpCAS', false)){
       require_once "CAS.php";
     }
     $site = idx($config, self::KEY_SITE);

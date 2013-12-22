@@ -25,7 +25,7 @@ final class PhutilAuthAdapterCas extends PhutilAuthAdapter {
   }
 
   public function getAccountID() {
-    if (!class_exists('phpCAS')){
+    if (!class_exists('phpCAS', false)){
       require_once "CAS.php";
     }
     return phpCAS::getUser();
